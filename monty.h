@@ -13,7 +13,7 @@
 
 /* GLOBAL VARS */
 
-char *buff;
+extern char *buff;
 
 /* STRUCTURES */
 
