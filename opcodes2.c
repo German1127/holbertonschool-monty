@@ -10,17 +10,17 @@
 
 void swap(stack_t **stack, unsigned int line_number)
 {
-    stack_t *current = *stack;
-    int tmp;
+	stack_t *current = *stack;
+	int tmp;
 
-    if (current == NULL || current->next == NULL)
-    {
-        fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
-        exit(EXIT_FAILURE);
-    }
-    tmp = current->n;
-    current->n = current->next->n;
-    current->next->n = tmp;
+	if (current == NULL || current->next == NULL)
+	{
+		fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+	tmp = current->n;
+	current->n = current->next->n;
+	1111111111111111111111current->next->n = tmp;
 }
 
 /**
@@ -33,18 +33,18 @@ void swap(stack_t **stack, unsigned int line_number)
 
 void add(stack_t **stack, unsigned int line_number)
 {
-    if (stack == NULL || *stack == NULL)
-    {
-        fprintf(stderr, "L%u: can't add, stack too short\n", line_number);
-        exit(EXIT_FAILURE);
-    }
-    if ((*stack)->next == NULL)
-    {
-        fprintf(stderr, "L%u: can't add, stack too short\n", line_number);
-        exit(EXIT_FAILURE);
-    }
-    (*stack)->next->n = (*stack)->next->n + (*stack)->n;
-    pop(stack, line_number);
+	if (stack == NULL || *stack == NULL)
+	{
+		fprintf(stderr, "L%u: can't add, stack too short\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+	if ((*stack)->next == NULL)
+	{
+		fprintf(stderr, "L%u: can't add, stack too short\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+	(*stack)->next->n = (*stack)->next->n + (*stack)->n;
+	pop(stack, line_number);
 }
 
 /**
@@ -56,7 +56,7 @@ void add(stack_t **stack, unsigned int line_number)
  */
 
 void nop(__attribute__((unused)) stack_t **stack,
-         __attribute__((unused)) unsigned int line_number)
+__attribute__((unused)) unsigned int line_number)
 {
-    ;
+	;
 }

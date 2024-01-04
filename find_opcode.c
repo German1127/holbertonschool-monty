@@ -39,3 +39,4 @@ void find_opcode(char *opcode, stack_t **stack, unsigned int line_number)
 	fprintf(stderr, "L%u: unknown instruction %s\n", line_number, opcode);
 	exit(EXIT_FAILURE);
 }
+
