@@ -20,7 +20,7 @@ void swap(stack_t **stack, unsigned int line_number)
 	}
 	tmp = current->n;
 	current->n = current->next->n;
-	1111111111111111111111current->next->n = tmp;
+	current->next->n = tmp;
 }
 
 /**
